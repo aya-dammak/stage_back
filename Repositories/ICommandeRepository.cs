@@ -6,10 +6,10 @@ namespace foodyApi.Repositories
 {
     public interface ICommandeRepository
     {
-        Task<IEnumerable<Commande>> GetCommandesAsync();
-        Task<Commande> GetCommandeByIdAsync(int id);
-        Task AddCommandeAsync(Commande commande);
-        Task UpdateCommandeAsync(Commande commande);
-        Task DeleteCommandeAsync(int id);
+        Task<List<Commande>> GetAllCommandesAsync(); // Changez ici en List
+        Task<Commande> GetCommandeByIdAsync(int commandeId);
+        Task<Commande> CreateCommandeAsync(Commande commande);
+        Task<Commande> UpdateCommandeAsync(Commande commande); // Changez ici en Commande
+        Task<bool> DeleteCommandeAsync(int commandeId);
     }
 }

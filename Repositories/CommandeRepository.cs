@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using foodyApi.Data;
 using foodyApi.Models;
+using foodyApi.Data;
 
 namespace foodyApi.Repositories
 {
@@ -16,45 +15,53 @@ namespace foodyApi.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Commande>> GetCommandesAsync()
+        public async Task<List<Commande>> GetAllCommandesAsync() // Changez ici en List
         {
             return await _context.Commandes.ToListAsync();
         }
 
-        public async Task<Commande> GetCommandeByIdAsync(int id)
+        public async Task<Commande> GetCommandeByIdAsync(int commandeId)
         {
-            var commande = await _context.Commandes.FindAsync(id);
-            if (commande == null)
-            {
-                throw new KeyNotFoundException($"Commande with ID {id} not found.");
-            }
-            return commande;
+            var commande = await _context.Commandes.FindAsync(commandeId);
+            return commande ?? throw new KeyNotFoundException($"Commande with ID {commandeId} not found.");
         }
 
-        public async Task AddCommandeAsync(Commande commande)
+        public async Task<Commande> CreateCommandeAsync(Commande commande)
         {
             _context.Commandes.Add(commande);
             await _context.SaveChangesAsync();
+            return commande;
         }
 
-        public async Task UpdateCommandeAsync(Commande commande)
+        public async Task<Commande> UpdateCommandeAsync(Commande commande) // Changez ici en Commande
         {
-            _context.Entry(commande).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            var existingCommande = await _context.Commandes.FindAsync(commande.CommandeId);
+            if (existingCommande != null)
+            {
+                existingCommande.Nom = commande.Nom;
+                existingCommande.Email = commande.Email;
+                existingCommande.Adresse = commande.Adresse;
+                existingCommande.Telephone = commande.Telephone;
+                existingCommande.DetailsCommande = commande.DetailsCommande;
+
+                await _context.SaveChangesAsync();
+                return existingCommande; // Retourner la commande mise à jour
+            }
+
+            throw new KeyNotFoundException($"Commande with ID {commande.CommandeId} not found.");
         }
 
-        public async Task DeleteCommandeAsync(int id)
+        public async Task<bool> DeleteCommandeAsync(int commandeId)
         {
-            var commande = await _context.Commandes.FindAsync(id);
+            var commande = await _context.Commandes.FindAsync(commandeId);
             if (commande != null)
             {
                 _context.Commandes.Remove(commande);
                 await _context.SaveChangesAsync();
+                return true;
             }
-            else
-            {
-                throw new KeyNotFoundException($"Commande with ID {id} not found.");
-            }
+
+            return false;
         }
     }
 }

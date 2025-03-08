@@ -6,10 +6,10 @@ namespace foodyApi.Services
 {
     public interface ICommandeService
     {
-        Task<IEnumerable<Commande>> GetCommandesAsync();
-        Task<Commande> GetCommandeByIdAsync(int id);
-        Task AddCommandeAsync(Commande commande);
-        Task UpdateCommandeAsync(Commande commande);
-        Task DeleteCommandeAsync(int id);
+        Task<Commande> CreateCommandeAsync(Commande commande);
+        Task<List<Commande>> GetAllCommandesAsync();
+        Task<Commande> GetCommandeByIdAsync(int commandeId);
+        Task<Commande> UpdateCommandeAsync(Commande commande);
+        Task<bool> DeleteCommandeAsync(int commandeId);
     }
 }

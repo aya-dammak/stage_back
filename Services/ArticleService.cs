@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using foodyApi.Models;
 using foodyApi.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace foodyApi.Services
 {
@@ -37,6 +38,13 @@ namespace foodyApi.Services
         public async Task DeleteArticleAsync(int id)
         {
             await _articleRepository.DeleteArticleAsync(id);
+        }
+
+        // Nouvelle méthode pour charger la catégorie associée
+        public async Task LoadCategoryAsync(Article article)
+        {
+            // Utilisez le repository ou le contexte pour charger la catégorie
+            await _articleRepository.LoadCategoryAsync(article);
         }
     }
 }

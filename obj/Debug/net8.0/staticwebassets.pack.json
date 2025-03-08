@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Cordon_Bleu.jpg",
+      "PackagePath": "staticwebassets\\images\\Cordon_Bleu.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Escaope_Pané.jpg",
+      "PackagePath": "staticwebassets\\images\\Escaope_Pané.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pasta_Alfredo.jpg",
+      "PackagePath": "staticwebassets\\images\\Pasta_Alfredo.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pasta_FruitDeMer.jpg",
+      "PackagePath": "staticwebassets\\images\\Pasta_FruitDeMer.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pasta_Puttanesca.jpg",
+      "PackagePath": "staticwebassets\\images\\Pasta_Puttanesca.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pizza_4Fromages.jpg",
+      "PackagePath": "staticwebassets\\images\\Pizza_4Fromages.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pizza_Pepperoni.jpg",
+      "PackagePath": "staticwebassets\\images\\Pizza_Pepperoni.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pizza_Thon.jpg",
+      "PackagePath": "staticwebassets\\images\\Pizza_Thon.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pizza_ViandeHaché.jpg",
+      "PackagePath": "staticwebassets\\images\\Pizza_ViandeHaché.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Pizza_Végétarienne.jpg",
+      "PackagePath": "staticwebassets\\images\\Pizza_Végétarienne.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Salade_FruitDeMer.jpg",
+      "PackagePath": "staticwebassets\\images\\Salade_FruitDeMer.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Salade_Riz.jpg",
+      "PackagePath": "staticwebassets\\images\\Salade_Riz.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\Salade_Végéterienne.jpg",
+      "PackagePath": "staticwebassets\\images\\Salade_Végéterienne.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\baguette farcie.jpeg",
+      "PackagePath": "staticwebassets\\images\\baguette farcie.jpeg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\escalope_pané.png",
+      "PackagePath": "staticwebassets\\images\\escalope_pané.png"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\f1.png",
+      "PackagePath": "staticwebassets\\images\\f1.png"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\f2.png",
+      "PackagePath": "staticwebassets\\images\\f2.png"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\f3.png",
+      "PackagePath": "staticwebassets\\images\\f3.png"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\f6.png",
+      "PackagePath": "staticwebassets\\images\\f6.png"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\panozzo.webp",
+      "PackagePath": "staticwebassets\\images\\panozzo.webp"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\pasta.webp",
+      "PackagePath": "staticwebassets\\images\\pasta.webp"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\pizza_margaritta.jpg",
+      "PackagePath": "staticwebassets\\images\\pizza_margaritta.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\poisson.jpg",
+      "PackagePath": "staticwebassets\\images\\poisson.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\salade cesar.jpg",
+      "PackagePath": "staticwebassets\\images\\salade cesar.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\salade de riz.jpg",
+      "PackagePath": "staticwebassets\\images\\salade de riz.jpg"
+    },
+    {
+      "Id": "C:\\laragon\\www\\foodyApi\\wwwroot\\images\\salade mechouia.jpg",
+      "PackagePath": "staticwebassets\\images\\salade mechouia.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.foodyApi.props",
+      "PackagePath": "build\\foodyApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.foodyApi.props",
+      "PackagePath": "buildMultiTargeting\\foodyApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.foodyApi.props",
+      "PackagePath": "buildTransitive\\foodyApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.foodyApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

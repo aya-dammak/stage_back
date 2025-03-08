@@ -1,12 +1,6 @@
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.csproj.AssemblyReference.cache
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.AssemblyInfoInputs.cache
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.AssemblyInfo.cs
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.csproj.CoreCompileInputs.cache
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.MvcApplicationPartsAssemblyInfo.cs
-C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.MvcApplicationPartsAssemblyInfo.cache
 C:\laragon\www\foodyApi\bin\Debug\net8.0\appsettings.Development.json
 C:\laragon\www\foodyApi\bin\Debug\net8.0\appsettings.json
+C:\laragon\www\foodyApi\bin\Debug\net8.0\foodyApi.staticwebassets.runtime.json
 C:\laragon\www\foodyApi\bin\Debug\net8.0\foodyApi.exe
 C:\laragon\www\foodyApi\bin\Debug\net8.0\foodyApi.deps.json
 C:\laragon\www\foodyApi\bin\Debug\net8.0\foodyApi.runtimeconfig.json
@@ -40,6 +34,8 @@ C:\laragon\www\foodyApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\laragon\www\foodyApi\bin\Debug\net8.0\MySqlConnector.dll
+C:\laragon\www\foodyApi\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -121,6 +117,14 @@ C:\laragon\www\foodyApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.
 C:\laragon\www\foodyApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\laragon\www\foodyApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.csproj.AssemblyReference.cache
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.AssemblyInfoInputs.cache
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.AssemblyInfo.cs
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.csproj.CoreCompileInputs.cache
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.MvcApplicationPartsAssemblyInfo.cs
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.MvcApplicationPartsAssemblyInfo.cache
+C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.sourcelink.json
 C:\laragon\www\foodyApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\laragon\www\foodyApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\laragon\www\foodyApi\obj\Debug\net8.0\staticwebassets\msbuild.foodyApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -135,5 +139,3 @@ C:\laragon\www\foodyApi\obj\Debug\net8.0\refint\foodyApi.dll
 C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.pdb
 C:\laragon\www\foodyApi\obj\Debug\net8.0\foodyApi.genruntimeconfig.cache
 C:\laragon\www\foodyApi\obj\Debug\net8.0\ref\foodyApi.dll
-C:\laragon\www\foodyApi\bin\Debug\net8.0\MySqlConnector.dll
-C:\laragon\www\foodyApi\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll

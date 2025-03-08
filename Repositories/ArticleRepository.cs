@@ -18,8 +18,12 @@ namespace foodyApi.Repositories
 
         public async Task<IEnumerable<Article>> GetArticlesAsync()
         {
-            return await _context.Articles.ToListAsync();
+            // Utilisez Include pour charger la catégorie associée
+            return await _context.Articles
+                                .Include(a => a.Category) // Charger la catégorie
+                                .ToListAsync();
         }
+
 
         public async Task<Article> GetArticleByIdAsync(int id)
         {
@@ -55,6 +59,13 @@ namespace foodyApi.Repositories
             {
                 throw new KeyNotFoundException($"Article with ID {id} not found.");
             }
+        }
+
+        public async Task LoadCategoryAsync(Article article)
+        {
+            await _context.Entry(article)
+                .Reference(a => a.Category)
+                .LoadAsync();
         }
     }
 }

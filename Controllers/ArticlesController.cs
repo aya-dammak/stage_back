@@ -38,7 +38,13 @@ namespace foodyApi.Controllers
         [HttpPost]
         public async Task<ActionResult> PostArticle(Article article)
         {
+            // Ajoutez l'article à la base de données
             await _articleService.AddArticleAsync(article);
+            
+            // Charger la catégorie associée
+            await _articleService.LoadCategoryAsync(article);
+
+            // Retournez l'article avec la catégorie incluse
             return CreatedAtAction(nameof(GetArticle), new { id = article.ArticleId }, article);
         }
 

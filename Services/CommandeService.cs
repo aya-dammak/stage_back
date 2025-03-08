@@ -14,29 +14,29 @@ namespace foodyApi.Services
             _commandeRepository = commandeRepository;
         }
 
-        public async Task<IEnumerable<Commande>> GetCommandesAsync()
+        public async Task<Commande> CreateCommandeAsync(Commande commande)
         {
-            return await _commandeRepository.GetCommandesAsync();
+            return await _commandeRepository.CreateCommandeAsync(commande);
         }
 
-        public async Task<Commande> GetCommandeByIdAsync(int id)
+        public async Task<List<Commande>> GetAllCommandesAsync()
         {
-            return await _commandeRepository.GetCommandeByIdAsync(id);
+            return await _commandeRepository.GetAllCommandesAsync();
         }
 
-        public async Task AddCommandeAsync(Commande commande)
+        public async Task<Commande> GetCommandeByIdAsync(int commandeId)
         {
-            await _commandeRepository.AddCommandeAsync(commande);
+            return await _commandeRepository.GetCommandeByIdAsync(commandeId);
         }
 
-        public async Task UpdateCommandeAsync(Commande commande)
+        public async Task<Commande> UpdateCommandeAsync(Commande commande)
         {
-            await _commandeRepository.UpdateCommandeAsync(commande);
+            return await _commandeRepository.UpdateCommandeAsync(commande);
         }
 
-        public async Task DeleteCommandeAsync(int id)
+        public async Task<bool> DeleteCommandeAsync(int commandeId)
         {
-            await _commandeRepository.DeleteCommandeAsync(id);
+            return await _commandeRepository.DeleteCommandeAsync(commandeId);
         }
     }
 }

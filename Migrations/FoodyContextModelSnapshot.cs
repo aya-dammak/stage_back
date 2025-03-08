@@ -30,8 +30,13 @@ namespace foodyApi.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ArticleId"));
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CategoryId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
@@ -43,7 +48,77 @@ namespace foodyApi.Migrations
 
                     b.HasKey("ArticleId");
 
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("CategoryId1");
+
                     b.ToTable("Articles");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Cart", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CartId"));
+
+                    b.HasKey("CartId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.CartItem", b =>
+                {
+                    b.Property<int>("CartItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CartItemId"));
+
+                    b.Property<int>("ArticleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartItemId");
+
+                    b.HasIndex("ArticleId");
+
+                    b.HasIndex("CartId");
+
+                    b.ToTable("CartItems");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CategoryId"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("foodyApi.Models.Commande", b =>
@@ -61,10 +136,6 @@ namespace foodyApi.Migrations
                     b.Property<DateTime>("DateCommande")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("DetailsCommande")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -80,6 +151,32 @@ namespace foodyApi.Migrations
                     b.HasKey("CommandeId");
 
                     b.ToTable("Commandes");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.CommandeItem", b =>
+                {
+                    b.Property<int>("CommandeItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CommandeItemId"));
+
+                    b.Property<int>("ArticleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CommandeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommandeItemId");
+
+                    b.HasIndex("ArticleId");
+
+                    b.HasIndex("CommandeId");
+
+                    b.ToTable("CommandeItems");
                 });
 
             modelBuilder.Entity("foodyApi.Models.Utilisateur", b =>
@@ -105,6 +202,70 @@ namespace foodyApi.Migrations
                     b.HasKey("UtilisateurId");
 
                     b.ToTable("Utilisateurs");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Article", b =>
+                {
+                    b.HasOne("foodyApi.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("foodyApi.Models.Category", null)
+                        .WithMany("Articles")
+                        .HasForeignKey("CategoryId1");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.CartItem", b =>
+                {
+                    b.HasOne("foodyApi.Models.Article", "Article")
+                        .WithMany()
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("foodyApi.Models.Cart", null)
+                        .WithMany("CartItems")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.CommandeItem", b =>
+                {
+                    b.HasOne("foodyApi.Models.Article", "Article")
+                        .WithMany()
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("foodyApi.Models.Commande", "Commande")
+                        .WithMany("DetailsCommande")
+                        .HasForeignKey("CommandeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
+
+                    b.Navigation("Commande");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Cart", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Category", b =>
+                {
+                    b.Navigation("Articles");
+                });
+
+            modelBuilder.Entity("foodyApi.Models.Commande", b =>
+                {
+                    b.Navigation("DetailsCommande");
                 });
 #pragma warning restore 612, 618
         }

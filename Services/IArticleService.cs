@@ -11,5 +11,7 @@ namespace foodyApi.Services
         Task AddArticleAsync(Article article);
         Task UpdateArticleAsync(Article article);
         Task DeleteArticleAsync(int id);
+        Task LoadCategoryAsync(Article article);
     }
+
 }
